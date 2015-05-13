@@ -690,5 +690,14 @@ namespace Microsoft.PowerShell.PackageManagement.Resources {
                 return ResourceManager.GetString("UserDeclinedUntrustedPackageInstall", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You cannot use the parameters RequiredVersion and either MinimumVersion or MaximumVersion in the same command..
+        /// </summary>
+        internal static string VersionRangeAndRequiredVersionCannotBeSpecifiedTogether {
+            get {
+                return ResourceManager.GetString("VersionRangeAndRequiredVersionCannotBeSpecifiedTogether", resourceCulture);
+            }
+        }
     }
 }

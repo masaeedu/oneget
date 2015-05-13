@@ -82,6 +82,7 @@ namespace Microsoft.PowerShell.PackageManagement {
             public static ErrorMessage FolderNotFound = new ErrorMessage(Messages.FolderNotFound, ErrorCategory.ObjectNotFound);
             public static ErrorMessage MoreThanOneFolderMatched = new ErrorMessage(Messages.MoreThanOneFolderMatched, ErrorCategory.ObjectNotFound);
             public static ErrorMessage MoreThanOneFileMatched = new ErrorMessage(Messages.MoreThanOneFileMatched, ErrorCategory.ObjectNotFound);
+            public static ErrorMessage VersionRangeAndRequiredVersionCannotBeSpecifiedTogether = new ErrorMessage(Messages.VersionRangeAndRequiredVersionCannotBeSpecifiedTogether, ErrorCategory.InvalidArgument);
             // ReSharper restore InconsistentNaming
         }
 
@@ -158,6 +159,7 @@ namespace Microsoft.PowerShell.PackageManagement {
             internal const string PackageFileExists = "MSG:PackageFileExists";
             internal const string UnableToOverwrite = "MSG:UnableToOverwrite";
             internal const string UnableToFindDependencyPackage = "MSG:UnableToFindDependencyPackage";
+            internal const string VersionRangeAndRequiredVersionCannotBeSpecifiedTogether = "MSG:VersionRangeAndRequiredVersionCannotBeSpecifiedTogether";
         }
 
         internal static class Nouns {

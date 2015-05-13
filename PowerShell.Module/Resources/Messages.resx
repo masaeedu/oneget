@@ -391,4 +391,7 @@
   <data name="SkippedInstalledPackageMultiple" xml:space="preserve">
     <value>Skipping Installed Package '{0}' ({1} of {2}).</value>
   </data>
+  <data name="VersionRangeAndRequiredVersionCannotBeSpecifiedTogether" xml:space="preserve">
+    <value>You cannot use the parameters RequiredVersion and either MinimumVersion or MaximumVersion in the same command.</value>
+  </data>
 </root>

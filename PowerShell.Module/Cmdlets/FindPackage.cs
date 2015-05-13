@@ -41,6 +41,19 @@ namespace Microsoft.PowerShell.PackageManagement.Cmdlets {
         [Parameter]
         public override SwitchParameter AllVersions {get; set;}
 
+        public override bool BeginProcessingAsync()
+        {
+            if (!string.IsNullOrEmpty(RequiredVersion))
+            {
+                if ((!string.IsNullOrEmpty(MinimumVersion)) || (!string.IsNullOrEmpty(MaximumVersion)))
+                {
+                    Error(Constants.Errors.VersionRangeAndRequiredVersionCannotBeSpecifiedTogether);
+                }
+            }
+
+            return true;
+        }
+
         protected override void ProcessPackage(PackageProvider provider, IEnumerable<string> searchKey, SoftwareIdentity package) {
             base.ProcessPackage(provider, searchKey, package);
 
